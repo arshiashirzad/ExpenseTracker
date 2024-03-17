@@ -1,0 +1,29 @@
+﻿<Properties StartupConfiguration="{98B8680E-E365-4103-A574-93057179A48F}|Default">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ExpenseTracker/Models/ErrorViewModel.cs">
+    <Files>
+      <File FileName="ExpenseTracker/Models/ErrorViewModel.cs" Line="1" Column="1" />
+      <File FileName="ExpenseTracker/Models/Transaction.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ExpenseTracker" expanded="True">
+            <Node name="ExpenseTracker">
+              <Node name="Migrations" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="ErrorViewModel.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.ExpenseTracker PreferredExecutionTarget="/Applications/Google Chrome.app" />
+</Properties>
