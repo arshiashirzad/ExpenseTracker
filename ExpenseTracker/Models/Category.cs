@@ -17,12 +17,12 @@ public class Category
     public string Icon { get; set; } = "";
     [Column(TypeName ="nvarchar(255)")]
     public string Type { get; set; } = "Expense";
-    // [NotMapped]
-    // public string? TitleWithIcon
-    // {
-    //     get
-    //     {
-    //         return this.Icon + " " + this.Title;
-    //     }
-    // }
+    [NotMapped]
+    public string? TitleWithIcon
+    {
+        get
+        {
+            return this.Icon + " " + this.Title;
+        }
+    }
 }
