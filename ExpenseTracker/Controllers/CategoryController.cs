@@ -26,18 +26,16 @@ namespace ExpenseTracker.Controllers
                         Problem("Entity set 'ApplicationDbContext.Categories'  is null.");
         }
         // GET: Category/AddOrEdit
-        public IActionResult AddOrEdit(int id = 0)
+        public IActionResult AddOrEdit(int Id = 0)
         {
-            if (id == 0)
+            if (Id == 0)
                 return View(new Category());
             else
-                return View(_context.Categories.Find(id));
+                return View(_context.Categories.Find(Id));
 
         }
 
         // POST: Category/AddOrEdit
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddOrEdit([Bind("Id,Title,Icon,Type")] Category category)
