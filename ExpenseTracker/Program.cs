@@ -30,6 +30,6 @@ app.UseRouting();
 app.UseStaticFiles();
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Category}/{action=Create}/{id?}");
+    pattern: "{controller=Dashbord}/{action=Index}/{id?}");
 app.MapRazorPages();
 app.Run();
