@@ -15,8 +15,8 @@ html {
 
 body {
   margin-bottom: 60px;
-  background-color: #12161d;
-  color: #fff;
+  background-color: #FFF7F1;
+  color: black ;
   overflow: hidden;
 }
 
@@ -56,7 +56,7 @@ body {
 }
 
 .e-grid .e-gridcontent, .e-grid .e-table {
-  background-color: #1a222b;
+  background-color: #FFE4C9;
 }
 
 .e-grid .e-gridheader {
@@ -72,12 +72,12 @@ body {
 }
 
 .e-grid .e-gridpager {
-  background-color: #1a222b;
+  background-color: #FFE4C9;
 }
 
 .e-grid .e-pagercontainer {
   border: none;
-  background-color: #1a222b;
+  background-color: #FFE4C9;
 }
 
 .e-grid .e-content table {
@@ -85,13 +85,13 @@ body {
 }
 
 .e-pagercontainer .e-icons {
-  background-color: #1a222b;
+  background-color: #FFE4C9;
   border: none !important;
 }
 
 .e-pager .e-numericitem {
   color: #adb5bd;
-  background-color: #1a222b;
+  background-color: #FFE4C9;
   padding: 15px !important;
 }
 
@@ -100,17 +100,17 @@ body {
 }
 
 .e-pager .e-numericitem:hover {
-  color: #fff;
+  color: #BED1CF;
 }
 
 .e-pager .e-numericitem.e-currentitem {
-  color: #fff;
+  color: #BED1CF;
   border: none !important;
   background-color: #31373d;
 }
 
 .e-pager div.e-icons:not(.e-disable) {
-  color: #fff;
+  color: #BED1CF;
   cursor: pointer;
   font-weight: bold;
 }
@@ -171,7 +171,7 @@ body {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 13px;
-  color: #65da41;
+  color: #E78895;
 }
 
 #menu .e-menu-item.e-separator:not(:first-child) {
@@ -182,7 +182,7 @@ body {
 
 /*Navbar*/
 nav.navbar {
-  background-color: rgba(18, 22, 29);
+  background-color: #FFF7F1;
 }
 
 nav.navbar i {
@@ -236,19 +236,19 @@ img.profile-pic {
 .custom-rbt-group label.e-btn {
   box-shadow: none !important;
   border: 1px solid #fff;
-  background-color: rgb(34 43 51);
+  background-color:#FFE4C9;
   color: #fff;
 }
 
 .e-btn-group.custom-rbt-group input:checked + label.e-btn {
   background-color: #fff;
-  color: #212b36;
+  color: #FFE4C9;
   border: 1px solid #fff;
 }
 
 /*SideBar*/
 #sidebar {
-  background-color: #12161d;
+  background-color: #FFF7F1;
   border-right: 1px dashed rgba(75,82,85,0.24);
   padding: 10px 20px;
   overflow:hidden;
@@ -315,11 +315,11 @@ img.profile-pic {
 /*Widget*/
 .widget {
   border-radius: 1rem;
-  background-color: #1a222b;
+  background-color: #FFE4C9;
 }
 
 .widget.summary > div:first-child {
-  background-color: #222b33;
+  background-color: #BED1CF;
   padding: 1rem;
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
@@ -330,7 +330,7 @@ img.profile-pic {
 }
 
 .widget.income > div:first-child {
-  color: #65da41;
+  color: #E78895;
 }
 
 .widget.expense > div:first-child {

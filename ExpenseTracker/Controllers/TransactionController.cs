@@ -40,6 +40,7 @@ namespace Expense_Tracker.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddOrEdit([Bind("Id,CategoryId,Amount,Note,Date")] Transaction transaction)
         {
+            transaction.Date = DateTime.Today;
             if (ModelState.IsValid)
             {
                 if (transaction.Id == 0)

@@ -5,7 +5,7 @@ using System.Globalization;
 
 namespace ExpenseTracker.Controllers
 {
-    public class DashboardController : Controller
+      public class DashboardController : Controller
     {
 
         private readonly ApplicationDbContext _context;
@@ -56,7 +56,9 @@ namespace ExpenseTracker.Controllers
                 })
                 .OrderByDescending(l => l.amount)
                 .ToList();
-            //Spline Chart here:
+
+            //Spline Chart - Income vs Expense
+
             //Income
             List<SplineChartData> IncomeSummary = SelectedTransactions
                 .Where(i => i.Category.Type == "Income")
@@ -101,7 +103,6 @@ namespace ExpenseTracker.Controllers
                 .OrderByDescending(j => j.Date)
                 .Take(5)
                 .ToListAsync();
-
 
             return View();
         }
