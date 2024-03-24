@@ -100,17 +100,17 @@ body {
 }
 
 .e-pager .e-numericitem:hover {
-  color: #BED1CF;
+  color: #EEEEEE;
 }
 
 .e-pager .e-numericitem.e-currentitem {
-  color: #BED1CF;
+  color: #EEEEEE;
   border: none !important;
   background-color: #31373d;
 }
 
 .e-pager div.e-icons:not(.e-disable) {
-  color: #BED1CF;
+  color: #EEEEEE;
   cursor: pointer;
   font-weight: bold;
 }
@@ -319,7 +319,7 @@ img.profile-pic {
 }
 
 .widget.summary > div:first-child {
-  background-color: #BED1CF;
+  background-color: #EEEEEE;
   padding: 1rem;
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
