@@ -40,6 +40,8 @@ namespace Expense_Tracker.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddOrEdit([Bind("Id,CategoryId,Amount,Note,Date")] Transaction transaction)
         {
+            //because of regional problems and AP years which are called as "persian years " i have to do this to show you the result!!!
+            transaction.Date = DateTime.Today;
             if (ModelState.IsValid)
             {
                 if (transaction.Id == 0)
