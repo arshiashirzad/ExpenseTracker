@@ -1,23 +1,29 @@
-version: "3.4"
-volumes:
-  datafiles:
+version: '3.8'
 services:
-  db:
-    image: mysql
-    volumes:
-      - datafiles:/var/lib/mysql
+  mysql:
+    image: mysql:latest
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: A936522#a
-  mvc:
+      MYSQL_DATABASE: TransactionDb
+      MYSQL_PASSWORD: A936522#a
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  app:
+    image: expensetrackerapp:latest
     build:
       context: .
       dockerfile: Dockerfile
-    depends_on:
-      - db
     ports:
-      - "8888:80"
-    restart: always
+      - "8080:80"
+    depends_on:
+      - mysql
     environment:
-      - DBHOST=db
-      - ASPNETCORE_ENVIRONMENT=Development
+      ASPNETCORE_ENVIRONMENT : Development
+      ConnectionStrings__DefaultConnection: "Server=mysql;Port=3306;Database=TransactionDb;Uid=root;Pwd=A936522#a;"
+
+volumes:
+  mysql_data:
