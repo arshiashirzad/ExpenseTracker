@@ -1,0 +1,23 @@
+version: "3.4"
+volumes:
+  datafiles:
+services:
+  db:
+    image: mysql
+    volumes:
+      - datafiles:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: A936522#a
+  mvc:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - db
+    ports:
+      - "8888:80"
+    restart: always
+    environment:
+      - DBHOST=db
+      - ASPNETCORE_ENVIRONMENT=Development

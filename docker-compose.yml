@@ -1,0 +1,34 @@
+version: "3.4"
+volumes:
+  datafiles:
+services:
+ ExpenseTracker:
+  image: arshiash/ExpenseTracker
+  container_name: ExpenseTracker
+  ports: 
+   - 8888:8888
+  depends_on:
+   - mysql
+db:
+  image: docker.arvancloud.ir/mysql
+  restart: always
+  environment:
+    - MYSQL_DATABASE = TransactionDb
+    - MYSQL_ROOT_PASSWORD = A936522#a
+  ports:
+    - '3306:3306'
+  volumes:
+    - db: /var/lib/mysql
+      # - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+  # mvc:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #   depends_on:
+  #     - db
+  #   ports:
+  #     - "8888:80"
+  #   restart: always
+  environment:
+    - DBHOST=db
+    - ASPNETCORE_ENVIRONMENT=Development
