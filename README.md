@@ -24,27 +24,30 @@ ExpenseTracker is a web application designed to help users track their expenses 
 - Syncfusion: Syncfusion components are utilized for enhanced frontend functionality and UI elements.
 - Docker: The application is containerized using Docker for simplified deployment and management.
 ## Setup Instructions
+1.Clone the Repository: Start by cloning the ExpenseTracker repository to your local machine.
+```
+git clone https://github.com/your_username/ExpenseTracker.git
 
-
-
-## Screenshots
-
-1. Clone the Repository: Start by cloning the ExpenseTracker repository to your local machine.
-![App Screenshot](/images/gitclone.png)
+```
 2. Database Configuration: Configure your MySQL database settings in the appsettings.json file.
-![App Screenshot](/images/connectionstring.png)
-3. Database Migration: Run the database migration to create the necessary tables in your MySQL database.
-![App Screenshot](/images/migration.png)
-4. Build Docker Image: Build the Docker image using the provided Dockerfile.
-![App Screenshot](/images/dockerrun.png)
+```json
+"ConnectionStrings": {
+    "DefaultConnection": "server=127.0.0.1;port=3306;database=TransactionDb;user=MYSQL_USERNAME;password=MYSQL_PASSWORD"
+  }
+```
+3.Database Migration: Run the database migration to create the necessary tables in your MySQL database.
+```
+dotnet ef database update
+```
+4.Build Docker Image: Build the Docker image using the provided Dockerfile.
+```
+docker build -t expensetracker .
+```
 5. Run Docker Container: Run the Docker container using the following command:
-![App Screenshot](/images/dockerfinal.png)
-6. Access the Application: Open your web browser and navigate to http://localhost:8080 to access the ExpenseTracker application.
-
-
-
-
-
+```
+docker run -d -p 8080:80 expensetracker
+```
+6.Access the Application: Open your web browser and navigate to http://localhost:8080 to access the ExpenseTracker application.
 ## Usage
 
 - Dashboard: Upon logging in, users are presented with a dashboard displaying summary statistics and expense charts.
