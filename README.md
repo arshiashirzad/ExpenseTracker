@@ -1,11 +1,6 @@
 
 # Expense Tracker Web App README
 
-An ASP.NET application with mysql database and 
-
-## Introduction
-
-
 ExpenseTracker is a web application designed to help users track their expenses efficiently. Built on .NET 6 with the MVC (Model-View-Controller) architecture, MySQL, Bootstrap, and Syncfusion for the frontend and UI design.Also this application provides a user-friendly interface to manage expenses seamlessly.
 ## Features
 
