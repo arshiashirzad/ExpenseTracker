@@ -45,7 +45,7 @@ docker run -d -p 8080:80 expensetracker
 6.Access the Application: Open your web browser and navigate to http://localhost:8080 to access the ExpenseTracker application.
 ## Demo
 
-![App Demo] (images/Demo.png)
+![App Demo] (/images/Demo.png)
 
 
 ## Usage
