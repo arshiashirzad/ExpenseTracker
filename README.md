@@ -21,7 +21,7 @@ ExpenseTracker is a web application designed to help users track their expenses 
 ## Setup Instructions
 1.Clone the Repository: Start by cloning the ExpenseTracker repository to your local machine.
 ```
-git clone https://github.com/your_username/ExpenseTracker.git
+git clone https://github.com/arshiashirzad/ExpenseTracker.git
 
 ```
 2. Database Configuration: Configure your MySQL database settings in the appsettings.json file.
