@@ -43,9 +43,14 @@ docker build -t expensetracker .
 docker run -d -p 8080:80 expensetracker
 ```
 6.Access the Application: Open your web browser and navigate to http://localhost:8080 to access the ExpenseTracker application.
+## Demo
+
+![App Demo] (images/Demo.png)
+
+
 ## Usage
 
-- Dashboard: Upon logging in, users are presented with a dashboard displaying summary statistics and expense charts.
+- Dashboard: users are presented with a dashboard displaying summary statistics and expense charts.
 - Expense Logging: Users can add new expenses by clicking on the "Add Expense" button and filling out the required details.
 - Category Management: Users can manage expense categories through the category management interface.
 - Data Visualization: Explore expense data through interactive charts and graphs to gain insights into spending habits.
