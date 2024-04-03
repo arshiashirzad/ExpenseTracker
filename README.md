@@ -30,19 +30,31 @@ git clone https://github.com/arshiashirzad/ExpenseTracker.git
     "DefaultConnection": "server=127.0.0.1;port=3306;database=TransactionDb;user=MYSQL_USERNAME;password=MYSQL_PASSWORD"
   }
 ```
-3.Database Migration: Run the database migration to create the necessary tables in your MySQL database.
+3.Mind changing the connection string also in the "Context/MyDbContext.cs" file
+
+```
+protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+                optionsBuilder.UseMySql("server=127.0.0.1;port=3306;database=TransactionDb;user=YOUR_USERNAME;password=YOUR_PASSWORD",ServerVersion.AutoDetect("server=127.0.0.1;port=3306;database=TransactionDb;user=YOUR_USERNAME;password=YOUR_PASSWORD"));
+            }
+        }
+```
+4.Database Migration: Run the database migration to create the necessary tables in your MySQL database.
 ```
 dotnet ef database update
 ```
-4.Build Docker Image: Build the Docker image using the provided Dockerfile.
+5.Build Docker Image: Build the Docker image using the provided Dockerfile.
 ```
 docker build -t expensetracker .
 ```
-5. Run Docker Container: Run the Docker container using the following command:
+6. Run Docker Container: Run the Docker container using the following command:
 ```
 docker run -d -p 8080:80 expensetracker
 ```
-6.Access the Application: Open your web browser and navigate to http://localhost:8080 to access the ExpenseTracker application.
+7.Access the Application: Open your web browser and navigate to http://localhost:8080 to access the ExpenseTracker application.
 ## Demo
 
 ![App Demo](/images/Demo.png)
