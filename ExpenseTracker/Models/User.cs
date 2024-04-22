@@ -9,8 +9,8 @@ public class User
         public int Id { get; set; }
         [Column(TypeName ="nvarchar(255)")]
         public string Username { get; set; }= string.Empty;
-        [Column]
         public byte[] PasswordHash { get; set; } 
-        [Column(TypeName = "nvarchar(255")] 
         public byte[] PasswordSalt  { get; set; }
+        public int TransactionId { get; set; }
+        public Transaction? Transaction { get; set; }
 }
